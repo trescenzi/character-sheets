@@ -1,0 +1,109 @@
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr .5fr;
+  grid-gap: 1em;
+  align-items: center;
+  margin: 2em;
+  background-color: #FAFAFA;
+  color: #2f2f2f;
+  font-family: 'Josefin Slab', serif;
+}
+
+h1, h2, h3, h4, h5, th {
+  font-family: 'Avro', serif;
+  margin: 0;
+  text-align: center;
+}
+
+h1, h2 {
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  grid-column: 1 / 4;
+}
+
+h2 {
+  grid-column: 1 / 4;
+}
+
+h3 {
+  grid-column: 1 / 4;
+  text-align: center;
+  font-size: 1.8em;
+  border-bottom: 1px dotted orangered;
+}
+
+h4 {
+ grid-column: 1; 
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+th {
+  text-align: left;
+}
+
+table:nth-of-type(1) th,
+table:nth-of-type(2) th {
+  font-family: 'Josefin Slab', serif;
+  font-weight: normal;
+}
+
+table {
+  grid-column: 2/4;
+}
+
+p:last-of-type {
+  grid-column: 1 / 4;
+}
+
+h5 + ul {
+  grid-column: 2 / 4;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h5 + ul li {
+  padding-left: 10px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 1em;
+    margin: 60px;
+  }
+    
+  td, th, p, li {
+    font-size: 30px;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  h4, table {
+    grid-column: 1/4;
+  }
+
+  ul {
+    grid-column: 1/ 4;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h5 + ul {
+    grid-column: 2 / 4;
+  }
+
+  p {
+    grid-column: 1 / 4;
+  }
+}
